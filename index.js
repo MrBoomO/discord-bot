@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = ("!");
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -10,7 +11,7 @@ client.user.setActivity("!help", {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'ping') {
+  if (msg.content === prefix+'ping') {
     msg.reply('Pong!');
   }
 });
