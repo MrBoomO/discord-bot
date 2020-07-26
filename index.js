@@ -4,7 +4,6 @@ const prefix = ("!");
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame('!help');
 });
 
 client.on('message', msg => {
