@@ -22,8 +22,8 @@ client.on('message', msg => {
 if (msg.content === prefix+'restart') {
 if (message.author.id === '556160607339020315') {
 channel.send('Resetting...')
-    .then(msg => client.destroy())
-    .then(() => client.login('NjQzMDQ5Mzg4NzY3MTgyODQ5.Xcf0aQ.gMllMX1waEivtAprlNME3q5YD5c'))
+client.destroy();
+client.login('NjQzMDQ5Mzg4NzY3MTgyODQ5.Xcf0aQ.gMllMX1waEivtAprlNME3q5YD5c');
 } else {
 msg.channel.send('You not bot creator!');
 }
