@@ -14,8 +14,16 @@ client.on('message', msg => {
 
 client.on('message', msg => {
 if (msg.content === prefix+'help') {
-msg.channel.send('soon');
+msg.channel.send('bot version 1.0 by MrBoom#4863');
 }
 });
+
+client.on('message', msg => {
+if (msg.content === prefix+'restart') {
+channel.send('Resetting...')
+    .then(msg => client.destroy())
+    .then(() => client.login
+}
+}
 
 client.login('NjQzMDQ5Mzg4NzY3MTgyODQ5.Xcf0aQ.gMllMX1waEivtAprlNME3q5YD5c');
