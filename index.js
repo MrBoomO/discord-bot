@@ -12,4 +12,10 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+if (msg.content === prefix+'help') {
+msg.channel.send('soon');
+}
+});
+
 client.login('NjQzMDQ5Mzg4NzY3MTgyODQ5.Xcf0aQ.gMllMX1waEivtAprlNME3q5YD5c');
