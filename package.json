@@ -1,24 +1,25 @@
 {
+
   "name": "Chica Manager",
+
+  "description": "The best",
+
   "version": "1.0.0",
-  "description": "The best bot",
+
   "main": "index.js",
+
   "scripts": {
-    "start": "node index.js",
+
+    "start": "node index.js"
+
   },
-  "engines": {
-    "node": ">=8"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/An-Idiots-Guide/guidebot.git"
-  },
-  "author": "Evelyne Lachance <eslachance@gmail.com> (http://evie.codes)",
-  "contributors": [
-    "York (http://anidiots.guide)"
-  ],
-  "homepage": "https://github.com/An-Idiots-Guide/guidebot#readme",
+
   "dependencies": {
-    "discord.js": "^11.6.4"
+
+    "discord.js": "12.0.0",
+
+    "request": "2.81.0"
+
   }
+
 }
