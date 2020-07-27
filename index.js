@@ -4,6 +4,7 @@ const prefix = ("b?");
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
+client.user.setActivity("b?help", { type: "PLAYING"});
 });
 
 client.on('message', msg => {
