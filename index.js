@@ -18,12 +18,11 @@ const exampleEmbed = new Discord.MessageEmbed()
 	.setColor('#0099ff')
 	.setURL('https://mrboomoff.gamejolt.io/')
 	.setAuthor('Commands list')
-	.setDescription('Here all commands of bot')
 	.addFields(
-		{ name: 'b?ping', value: 'Check if bot alive' },
-		{ name: 'b?help', value: 'Show all bot commands' },
-		{ name: 'b?server', value: 'Show server info' },
-		{ name: 'b?user', value: 'Show user info' },
+		{ name: 'ping', value: 'Check if bot alive' },
+		{ name: 'help', value: 'Show all bot commands' },
+		{ name: 'server', value: 'Show server info' },
+		{ name: 'user', value: 'Show user info' },
 	)
 	.setFooter('Bot by MrBoom#4863', 'https://github.com/MrBoomO/discord-bot/raw/master/img/lggw43axm1641.png');
 
