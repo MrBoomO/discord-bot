@@ -17,7 +17,7 @@ if (msg.content === prefix+'help') {
 const exampleEmbed = new Discord.MessageEmbed()
 	.setColor('#0099ff')
 	.setURL('https://mrboomoff.gamejolt.io/')
-	.setAuthor('Commands list', 'https://mrboomoff.gamejolt.io')
+	.setAuthor('Commands list')
 	.setDescription('Here all commands of bot')
 	.addFields(
 		{ name: 'b?ping', value: 'Check if bot alive' },
