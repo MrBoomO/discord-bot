@@ -14,7 +14,20 @@ client.on('message', msg => {
 
 client.on('message', msg => {
 if (msg.content === prefix+'help') {
-msg.channel.send('bot version 1.0 by MrBoom#4863');
+const exampleEmbed = new Discord.MessageEmbed()
+	.setColor('#0099ff')
+	.setURL('https://mrboomoff.gamejolt.io/')
+	.setAuthor('Commands list', 'https://mrboomoff.gamejolt.io')
+	.setDescription('Here all commands of bot')
+	.addFields(
+		{ name: 'b?ping', value: 'Check if bot alive' },
+		{ name: 'b?help', value: 'Show all bot commands' },
+		{ name: 'b?server', value: 'Show server info' },
+		{ name: 'b?user', value: 'Show user info' },
+	)
+	.setFooter('Bot by MrBoom#4863', 'https://github.com/MrBoomO/discord-bot/raw/master/img/lggw43axm1641.png');
+
+msg.channel.send(exampleEmbed);
 }
 });
 
