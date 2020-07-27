@@ -31,4 +31,4 @@ msg.channel.send(exampleEmbed);
 }
 });
 
-client.login('NjQzMDQ5Mzg4NzY3MTgyODQ5.Xcf0aQ.gMllMX1waEivtAprlNME3q5YD5c');
+client.login(process.env.TOKEN);
