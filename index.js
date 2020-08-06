@@ -40,7 +40,7 @@ const exampleEmbed = new Discord.MessageEmbed()
 	.addFields(
 		{ name: 'Название', value: `${msg.guild.name}` },
 		{ name: 'Регион', value: `${msg.guild.region}` },
-		{ name: 'Подтверждён', value: 'Показать информацию об сервере' },
+		{ name: 'Подтверждён', value: `${msg.guild.verified}` },
 		{ name: 'Количество пользователей', value: `${msg.guild.memberCount}` },
                 { name: 'Дата создания сервера', value: `${msg.guild.createdAt}` },
                 { name: 'Король сервера', value: `${msg.guild.owner}` }
