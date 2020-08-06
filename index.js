@@ -31,4 +31,8 @@ msg.channel.send(exampleEmbed);
 }
 });
 
+client.on("guildCreate", guild => {
+   guild.owner.send('Спасибо что добавили меня на свой сервер! Список команд можно получить команде b?help')
+});
+
 client.login(process.env.TOKEN);
