@@ -24,6 +24,10 @@ const exampleEmbed = new Discord.MessageEmbed()
 		{ name: 'help', value: 'Показать команды бота' },
 		{ name: 'server', value: 'Показать информацию об сервере' },
 		{ name: 'user', value: 'Показать информацию об пользователе' },
+{ name: 'ban', value: 'Забанить пользователя' },
+{ name: 'kick', value: 'Выгнать пользователя из сервера' },
+
+
 	)
 	.setFooter('Bot by MrBoom#4863', 'https://github.com/MrBoomO/discord-bot/raw/master/img/lggw43axm1641.png');
 
