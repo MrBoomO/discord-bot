@@ -76,7 +76,6 @@ if(message.content.startsWith(prefix+'user')){
 client.on('message', message => {
   if (!message.guild) return;
    if (message.content.startsWith(prefix+'kick')) {
-if (message.member.hasPermission("KICK_MEMBERS") {
     const user = message.mentions.users.first();
     if (user) {
       const member = message.guild.member(user);
@@ -96,19 +95,17 @@ if (message.member.hasPermission("KICK_MEMBERS") {
     } else {
       message.reply("You didn't mention the user to kick!");
     }
-} else {
-message.reply("У вас не хватает прав");
-  }
+}
 });
 
 client.on('message', message => {
   if (!message.guild) return;
   if (message.content.startsWith(prefix+'ban')) {
-if (message.member.hasPermission("BAN_MEMBERS") {
     const user = message.mentions.users.first();
     if (user) {
       const member = message.guild.member(user);
       if (member) {
+if (message.member.hasPermission("BAN_MEMBERS") {
         member
           .ban({
             reason: 'They were bad!',
@@ -120,14 +117,15 @@ if (message.member.hasPermission("BAN_MEMBERS") {
             message.reply('I was unable to ban the member');
             console.error(err);
           });
+} else {
+message.reply("У вас не хватает прав");
+});
       } else {
         message.reply("That user isn't in this guild!");
       }
     } else {
       message.reply("You didn't mention the user to ban!");
     }
-} else {
-message.reply("У вас не хватает прав");
 }
 });
 
