@@ -80,7 +80,7 @@ if(message.content.startsWith(prefix+'kick')){
             msg.members.mentions.first().kick();
         } catch {
             msg.reply("У меня не хватает прав, чтобы кикнуть " + msg.members.mentions.first());
-    }else {
+    } else {
         msg.reply("У вас не хватает прав, чтобы кикнуть " + msg.members.mentions.first());
 }
 });
