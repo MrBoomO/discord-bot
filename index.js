@@ -73,6 +73,18 @@ if(message.content.startsWith(prefix+'user')){
 }
 });
 
+clinet.on('message', msg => {
+if (msg.member.hasPermission("KICK_MEMBERS") {
+    if (msg.members.mentions.first()) {
+        try {
+            msg.members.mentions.first().kick();
+        } catch {
+            msg.reply("У меня не хватает прав, чтобы кикнуть " + msg.members.mentions.first());
+    }else {
+        msg.reply("У вас не хватает прав, чтобы кикнуть " + msg.members.mentions.first());
+}
+});
+
 client.on("guildCreate", guild => {
    guild.owner.send('Спасибо что добавили меня на свой сервер! Список команд можно получить команде b?help')
 });
