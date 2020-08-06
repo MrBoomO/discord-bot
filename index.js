@@ -51,6 +51,17 @@ msg.channel.send(exampleEmbed);
 }
 });
 
+client.on('message', msg => {
+if (msg.content.startsWith(prefix + 'user')) {
+    const user = msg.mentions.users.first() || message.author;
+    const avatarEmbed = new Discord.RichEmbed()
+        .setColor(0x333333)
+        .setAuthor(user.username)
+        .setImage(user.avatarURL);
+    msg.channel.send(avatarEmbed);
+}
+});
+
 client.on("guildCreate", guild => {
    guild.owner.send('Спасибо что добавили меня на свой сервер! Список команд можно получить команде b?help')
 });
