@@ -77,19 +77,13 @@ client.on("guildCreate", guild => {
    guild.owner.send('Спасибо что добавили меня на свой сервер! Список команд можно получить команде b?help')
 });
 
-client.on('message', message => {
-    switch(message.content.toUpperCase()) {
-        case 'b?restart':
-            resetBot(message.channel);
+client.on('message', msg => {
+    if(msg.content.startsWith(prefix+'restart')){
+            msg.channel.send('Resetting...')
+    .then(msg => client.destroy())
+    .then(() => client.login(process.env.TOKEN));
             break;
     }
 });
-
-function resetBot(channel) {
-    // send channel a message that you're resetting bot [optional]
-    channel.send('Resetting...')
-    .then(msg => client.destroy())
-    .then(() => client.login(process.env.TOKEN));
-}
 
 client.login(process.env.TOKEN);
