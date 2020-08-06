@@ -73,21 +73,32 @@ if(message.content.startsWith(prefix+'user')){
 }
 });
 
-clinet.on('message', msg => {
-if(message.content.startsWith(prefix+'kick')){
-    if (msg.members.mentions.first()) {
-        try {
-            msg.members.mentions.first().kick();
-        } catch {
-            msg.reply("У меня не хватает прав, чтобы кикнуть " + msg.members.mentions.first());
+client.on('message', message => {
+  if (!message.guild) return;
+
+   if (message.content.startsWith(prefix+'kick')) {
+    const user = message.mentions.users.first();
+    if (user) {
+      const member = message.guild.member(user);
+      if (member) {
+        member
+          .kick('Kicked by ChicaManager')
+          .then(() => {
+            message.reply(`Successfully kicked ${user.tag}`);
+          })
+          .catch(err => {
+            message.reply('I was unable to kick the member');
+            console.error(err);
+          });
+      } else {
+       message.reply("That user isn't in this guild!");
+      }
     } else {
-        msg.reply("У вас не хватает прав, чтобы кикнуть " + msg.members.mentions.first());
-}
+      message.reply("You didn't mention the user to kick!");
+    }
+  }
 });
 
-client.on("guildCreate", guild => {
-   guild.owner.send('Спасибо что добавили меня на свой сервер! Список команд можно получить команде b?help')
-});
 
 
 client.login(process.env.TOKEN);
