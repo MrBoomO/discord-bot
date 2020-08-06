@@ -38,8 +38,8 @@ const exampleEmbed = new Discord.MessageEmbed()
 	.setURL('https://mrboomoff.gamejolt.io/')
 	.setAuthor('Информация об сервере')
 	.addFields(
-		{ name: 'Название', value: 'Проверить, жив ли бот' },
-		{ name: 'Регион', value: 'Показать команды бота' },
+		{ name: 'Название', value: '${guild.name}' },
+		{ name: 'Регион', value: '${guild.region}' },
 		{ name: 'Подтверждён', value: 'Показать информацию об сервере' },
 		{ name: 'Количество пользователей', value: 'Показать информацию об пользователе' },
 	)
