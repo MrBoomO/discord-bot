@@ -95,7 +95,7 @@ client.on('message', message => {
     } else {
       message.reply("You didn't mention the user to kick!");
     }
-});
+}});
 
 client.on('message', message => {
   if (!message.guild) return;
@@ -118,13 +118,13 @@ if (message.member.hasPermission("BAN_MEMBERS") {
           });
 } else {
 message.reply("У вас не хватает прав");
-});
+})
       } else {
         message.reply("That user isn't in this guild!");
       }
     } else {
       message.reply("You didn't mention the user to ban!");
     }
-});
+}});
 
 client.login(process.env.TOKEN);
