@@ -42,7 +42,8 @@ const exampleEmbed = new Discord.MessageEmbed()
 		{ name: 'Регион', value: `${msg.guild.region}` },
 		{ name: 'Подтверждён', value: 'Показать информацию об сервере' },
 		{ name: 'Количество пользователей', value: `${msg.guild.memberCount}` },
-                { name: 'Дата создания сервера', value: `${msg.guild.createdAt}` }
+                { name: 'Дата создания сервера', value: `${msg.guild.createdAt}` },
+                { name: 'Король сервера', value: `${msg.guild.owner}` }
 	)
 	.setFooter('Bot by MrBoom#4863', 'https://github.com/MrBoomO/discord-bot/raw/master/img/lggw43axm1641.png');
 
