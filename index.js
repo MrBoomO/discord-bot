@@ -115,7 +115,7 @@ if (message.member.hasPermission("BAN_MEMBERS") {
           .catch(err => {
             message.reply('I was unable to ban the member');
             console.error(err);
-          });
+          })
 } else {
 message.reply("У вас не хватает прав");
 })
