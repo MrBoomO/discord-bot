@@ -82,7 +82,6 @@ client.on('message', msg => {
             msg.channel.send('Resetting...')
     .then(msg => client.destroy())
     .then(() => client.login(process.env.TOKEN));
-            break;
     }
 });
 
