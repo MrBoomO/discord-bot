@@ -77,12 +77,5 @@ client.on("guildCreate", guild => {
    guild.owner.send('Спасибо что добавили меня на свой сервер! Список команд можно получить команде b?help')
 });
 
-client.on('message', msg => {
-    if(msg.content.startsWith(prefix+'restart')){
-            msg.channel.send('Resetting...')
-    .then(msg => client.destroy())
-    .then(() => client.login(process.env.TOKEN));
-    }
-});
 
 client.login(process.env.TOKEN);
