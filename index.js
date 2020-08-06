@@ -9,7 +9,7 @@ client.user.setActivity("b?help", { type: "PLAYING"});
 
 client.on('message', msg => {
   if (msg.content === prefix+'ping') {
-    msg.reply('Pong!');
+    msg.reply('Понг!');
   }
 });
 
@@ -18,12 +18,12 @@ if (msg.content === prefix+'help') {
 const exampleEmbed = new Discord.MessageEmbed()
 	.setColor('#0099ff')
 	.setURL('https://mrboomoff.gamejolt.io/')
-	.setAuthor('Commands list')
+	.setAuthor('Мои команды')
 	.addFields(
-		{ name: 'ping', value: 'Check if bot alive' },
-		{ name: 'help', value: 'Show all bot commands' },
-		{ name: 'server', value: 'Show server info' },
-		{ name: 'user', value: 'Show user info' },
+		{ name: 'ping', value: 'Проверить, жив ли бот' },
+		{ name: 'help', value: 'Показать команды бота' },
+		{ name: 'server', value: 'Показать информацию об сервере' },
+		{ name: 'user', value: 'Показать информацию об пользователе' },
 	)
 	.setFooter('Bot by MrBoom#4863', 'https://github.com/MrBoomO/discord-bot/raw/master/img/lggw43axm1641.png');
 
