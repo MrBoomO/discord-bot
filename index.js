@@ -76,7 +76,7 @@ if(message.content.startsWith(prefix+'user')){
 client.on('message', message => {
   if (!message.guild) return;
    if (message.content.startsWith(prefix+'kick')) {
-if (msg.member.hasPermission("KICK_MEMBERS") {
+if (message.member.hasPermission("KICK_MEMBERS") {
     const user = message.mentions.users.first();
     if (user) {
       const member = message.guild.member(user);
@@ -98,14 +98,13 @@ if (msg.member.hasPermission("KICK_MEMBERS") {
     }
 } else {
 message.reply("У вас не хватает прав");
-}
   }
 });
 
 client.on('message', message => {
   if (!message.guild) return;
   if (message.content.startsWith(prefix+'ban')) {
-if (msg.member.hasPermission("BAN_MEMBERS") {
+if (message.member.hasPermission("BAN_MEMBERS") {
     const user = message.mentions.users.first();
     if (user) {
       const member = message.guild.member(user);
@@ -130,7 +129,6 @@ if (msg.member.hasPermission("BAN_MEMBERS") {
 } else {
 message.reply("У вас не хватает прав");
 }
-  }
 });
 
 client.login(process.env.TOKEN);
