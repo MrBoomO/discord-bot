@@ -104,7 +104,6 @@ client.on('message', message => {
     if (user) {
       const member = message.guild.member(user);
       if (member) {
-if (message.member.hasPermission("BAN_MEMBERS") {
         member
           .ban({
             reason: 'They were bad!',
@@ -116,9 +115,6 @@ if (message.member.hasPermission("BAN_MEMBERS") {
             message.reply('I was unable to ban the member');
             console.error(err);
           })
-} else {
-message.reply("У вас не хватает прав");
-})
       } else {
         message.reply("That user isn't in this guild!");
       }
