@@ -54,7 +54,7 @@ msg.channel.send(exampleEmbed);
 client.on('message', msg => {
 if (msg.content.startsWith(prefix + 'user')) {
     const user = msg.mentions.users.first() || msg.author;
-    const avatarEmbed = new Discord.RichEmbed()
+    const avatarEmbed = new Discord.MessageEmbed()
         .setColor(0x333333)
         .setAuthor(user.username)
         .setImage(user.avatarURL);
