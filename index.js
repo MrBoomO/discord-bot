@@ -95,7 +95,6 @@ client.on('message', message => {
     } else {
       message.reply("You didn't mention the user to kick!");
     }
-}
 });
 
 client.on('message', message => {
