@@ -80,7 +80,7 @@ client.on('message', message => {
     if (user) {
       const member = message.guild.member(user);
       if (member) {
-if (msg.member.hasPermission("KICK_MEMBERS") {
+if (msg.member.hasPermission("KICK_MEMBERS")) {
         member
           .kick('Kicked by ChicaManager')
           .then(() => {
@@ -90,7 +90,9 @@ if (msg.member.hasPermission("KICK_MEMBERS") {
             message.reply('I was unable to kick the member');
             console.error(err);
           });
-})
+} else {
+message.reply("У вас не хватает прав");
+}
       } else {
        message.reply("That user isn't in this guild!");
       }
