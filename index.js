@@ -126,7 +126,6 @@ message.reply("У вас не хватает прав");
     } else {
       message.reply("You didn't mention the user to ban!");
     }
-}
 });
 
 client.login(process.env.TOKEN);
