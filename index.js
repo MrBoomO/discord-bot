@@ -31,6 +31,24 @@ msg.channel.send(exampleEmbed);
 }
 });
 
+client.on('message', msg => {
+if (msg.content === prefix+'server') {
+const exampleEmbed = new Discord.MessageEmbed()
+	.setColor('#0099ff')
+	.setURL('https://mrboomoff.gamejolt.io/')
+	.setAuthor('Информация об сервере')
+	.addFields(
+		{ name: 'Название', value: 'Проверить, жив ли бот' },
+		{ name: 'Регион', value: 'Показать команды бота' },
+		{ name: 'Подтверждён', value: 'Показать информацию об сервере' },
+		{ name: 'Количество пользователей', value: 'Показать информацию об пользователе' },
+	)
+	.setFooter('Bot by MrBoom#4863', 'https://github.com/MrBoomO/discord-bot/raw/master/img/lggw43axm1641.png');
+
+msg.channel.send(exampleEmbed);
+}
+});
+
 client.on("guildCreate", guild => {
    guild.owner.send('Спасибо что добавили меня на свой сервер! Список команд можно получить команде b?help')
 });
