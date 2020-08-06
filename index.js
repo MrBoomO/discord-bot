@@ -51,14 +51,25 @@ msg.channel.send(exampleEmbed);
 }
 });
 
-client.on('message', msg => {
-if (msg.content.startsWith(prefix + 'user')) {
-    const user = msg.mentions.users.first() || msg.author;
-    const avatarEmbed = new Discord.MessageEmbed()
-        .setColor(0x333333);
-        .setAuthor(user.username);
-        .setImage(user.avatarURL);
-    msg.channel.send(avatarEmbed);
+client.on('message', message => {
+if(message.content.startsWith(prefix+'user')){
+    
+        
+        if(message.mentions.users.size){
+            let member=message.mentions.users.first()
+        if(member){
+            const emb=new Discord.MessageEmbed().setImage(member.displayAvatarURL()).setTitle(member.username)
+            message.channel.send(emb)
+            
+        }
+        else{
+            message.channel.send("Sorry none found with that name")
+
+        }
+        }else{
+            const emb=new Discord.MessageEmbed().setImage(message.author.displayAvatarURL()).setTitle(message.author.username)
+            message.channel.send(emb)
+        }
 }
 });
 
