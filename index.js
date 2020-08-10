@@ -138,7 +138,7 @@ message.reply("У вас не хватает прав");
 }});
 
 client.on('message', msg => {
-if(message.content.startsWith(prefix+'msg')) {
+if(msg.content.startsWith(prefix+'msg')) {
 msg.channel.send(`First argument: ${args[0]}`);
 }
 });
