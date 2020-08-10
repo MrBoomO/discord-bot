@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = ("b?");
+const prefix = ("!");
 const fs = require("fs");
 
 var config = require('config.json');
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setActivity("b?help", { type: "PLAYING"});
+client.user.setActivity("!help", { type: "PLAYING"});
 });
 
 client.on('message', msg => {
