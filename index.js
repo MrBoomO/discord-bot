@@ -3,8 +3,6 @@ const client = new Discord.Client();
 const prefix = ("!");
 const fs = require("fs");
 
-var config = require('config.json');
-
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setActivity("!help", { type: "PLAYING"});
