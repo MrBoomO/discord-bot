@@ -136,4 +136,10 @@ message.reply("У вас не хватает прав");
     }
 }});
 
+client.on('message', msg => {
+if(message.content.startsWith(prefix+'prefix')) {
+console.log("Changing prefix");
+}
+});
+
 client.login(process.env.TOKEN);
