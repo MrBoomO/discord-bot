@@ -156,6 +156,6 @@ if(msg.content.startsWith(prefix+'destroy')) {
      console.log("Destroys...");
      client.destroy();
 }
-}
+});
 
 client.login(process.env.TOKEN);
