@@ -146,7 +146,7 @@ msg.channel.send(`First argument: ${args[0]}`);
 client.on('message', msg => {
 if(msg.content.startsWith(prefix+'say')) {
      msg.channel.send(msg.content.substr(4));
-     msg.delete(10);
+     msg.delete();
 }
 });
 
