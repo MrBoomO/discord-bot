@@ -151,7 +151,7 @@ client.on("message", message => {
         userInfo.xp = 0
         message.reply("Поздравляем, ты достиг нового уровня!")
     }
-    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
     if(cmd === "info") {
         let userInfo = db[message.author.id];
