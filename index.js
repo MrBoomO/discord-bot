@@ -160,4 +160,12 @@ if(msg.content.startsWith(prefix+'destroy')) {
 }
 });
 
+bot.on("message", message => {
+    //Here you can put banned words and swearwords in the quotation marks "here"
+    const swearWords = ["сука", "блять", "трах", "секс", "когда видео", "хуй", "блэт", "бля"];
+    if( swearWords.some(word => message.content.includes(word)) ) {
+      message.reply("Ты использовал запрещённые слова.");
+      
+    }} )
+
 client.login(process.env.TOKEN);
