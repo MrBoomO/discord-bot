@@ -157,15 +157,16 @@ if(msg.content.startsWith(prefix+'destroy')) {
      msg.delete();
      console.log("Destroys...");
      client.destroy();
+     msg.channel.send('Выключаюсь...')
 }
 });
 
 client.on("message", message => {
     //Here you can put banned words and swearwords in the quotation marks "here"
-    const swearWords = ["сука", "блять", "трах", "секс", "когда видео", "хуй", "блэт", "бля"];
+    const swearWords = ["сука", "блять", "трах", "секс", "когда видео", "хуй", "блэт", "бля", "ска", "тварь", "порно", "анал"];
     if( swearWords.some(word => message.content.includes(word)) ) {
       message.reply("Ты использовал запрещённые слова.");
-      
+      message.delete()
     }} )
 
 client.login(process.env.TOKEN);
