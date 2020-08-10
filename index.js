@@ -150,4 +150,12 @@ if(msg.content.startsWith(prefix+'say')) {
 }
 });
 
+client.on('message', msg => {
+if(msg.content.startsWith(prefix+'destroy')) {
+     msg.delete();
+     console.log("Destroys...");
+     client.destroy();
+}
+}
+
 client.login(process.env.TOKEN);
