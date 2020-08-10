@@ -145,7 +145,7 @@ msg.channel.send(`First argument: ${args[0]}`);
 
 client.on('message', msg => {
 if(msg.content.startsWith(prefix+'say')) {
-   if (message.member.hasPermission("BAN_MEMBERS")) {
+   if (msg.member.hasPermission("BAN_MEMBERS")) {
      msg.channel.send(msg.content.substr(4));
    }
      msg.delete(10);
