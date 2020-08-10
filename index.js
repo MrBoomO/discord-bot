@@ -27,6 +27,7 @@ const exampleEmbed = new Discord.MessageEmbed()
 		{ name: 'user', value: 'Показать информацию об пользователе' },
 { name: 'ban', value: 'Забанить пользователя' },
 { name: 'kick', value: 'Выгнать пользователя из сервера' },
+{ name: 'msg', value: `Прислать важное сообщение` }
 
 
 	)
@@ -135,5 +136,11 @@ message.reply("У вас не хватает прав");
       message.reply("Вы не указали пользователя, который получит бан!");
     }
 }});
+
+client.on('message', msg => {
+if(message.content.startsWith(prefix+'msg')) {
+msg.channel.send(`First argument: ${args[0]}`);
+}
+});
 
 client.login(process.env.TOKEN);
