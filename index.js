@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = ("b?");
+const fs = require("fs");
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -67,7 +68,7 @@ if(message.content.startsWith(prefix+'user')){
             
         }
         else{
-            message.channel.send("Sorry none found with that name")
+            message.channel.send("Не найден пользователь с данным ником")
 
         }
         }else{
@@ -88,20 +89,20 @@ if (message.member.hasPermission("KICK_MEMBERS")) {
         member
           .kick('Kicked by ChicaManager')
           .then(() => {
-            message.reply(`Successfully kicked ${user.tag}`);
+            message.reply(`Успешно выгнан ${user.tag}`);
           })
           .catch(err => {
-            message.reply('I was unable to kick the member');
+            message.reply('Я не могу выгнать этого пользователя');
             console.error(err);
           });
 } else {
 message.reply("У вас не хватает прав");
 }
       } else {
-       message.reply("That user isn't in this guild!");
+       message.reply("Этот пользователь не на сервере!");
       }
     } else {
-      message.reply("You didn't mention the user to kick!");
+      message.reply("Вы не указали пользователя, который будет изгнан!");
     }
 }});
 
@@ -115,23 +116,23 @@ client.on('message', message => {
 if (message.member.hasPermission("BAN_MEMBERS")) {
         member
           .ban({
-            reason: 'They were bad!',
+            reason: 'Он был плохим!',
           })
           .then(() => {
-            message.reply(`Successfully banned ${user.tag}`);
+            message.reply(`Успешно был забанен ${user.tag}`);
           })
           .catch(err => {
-            message.reply('I was unable to ban the member');
+            message.reply('Я не могу забанить этого пользователя');
             console.error(err);
           })
 } else {
 message.reply("У вас не хватает прав");
 }
       } else {
-        message.reply("That user isn't in this guild!");
+        message.reply("Этот пользователь не на сервере!");
       }
     } else {
-      message.reply("You didn't mention the user to ban!");
+      message.reply("Вы не указали пользователя, который получит бан!");
     }
 }});
 
