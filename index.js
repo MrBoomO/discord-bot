@@ -168,11 +168,13 @@ client.on("message", message => {
     }} )
 
 client.on("guildCreate", guild => {
-    console.log("Joined a new guild: " + guild.name);
+    console.log("Joined a new guild: " + guild.name)
+   guild.owner.send('Спасибо что добавили меня на свой сервер! Моя команда ?help')
 })
 
 client.on("guildDelete", guild => {
-    console.log("Left a guild: " + guild.name);
+    console.log("Left a guild: " + guild.name)
+   guild.owner.send('Мне жаль покидать ваш прекрасный сервер😕. Досвидания.')
 })
 
 client.login(process.env.TOKEN);
