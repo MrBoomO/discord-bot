@@ -167,4 +167,12 @@ client.on("message", message => {
       message.delete()
     }} )
 
+client.on("guildCreate", guild => {
+    console.log("Joined a new guild: " + guild.name);
+})
+
+client.on("guildDelete", guild => {
+    console.log("Left a guild: " + guild.name);
+})
+
 client.login(process.env.TOKEN);
