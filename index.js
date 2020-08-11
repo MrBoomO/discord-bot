@@ -162,7 +162,7 @@ if(msg.content.startsWith(prefix+'destroy')) {
 });
 
 client.on("message", message => {
-    const swearWords = ["сука", "блять", "трах", "секс", "когда видео", "хуй", "блэт", "бля", "еблан", "тварь", "порно", "анал", "долбаёб", "пися", "пизда", "оргазм", "писька", "сиськ"];
+    const swearWords = ["сука", "блять", "трах", "секс", "когда видео", "хуй", "блэт", "бля", "еблан", "тварь", "порно", "анал", "долбаёб", "пися", "пизда", "оргазм", "писька", "сиськ", "хуесос"];
     if( swearWords.some(word => message.content.toLowerCase().includes(word)) ) {
       message.delete()
     }} )
