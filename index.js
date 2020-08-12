@@ -138,15 +138,6 @@ message.reply("У вас не хватает прав");
 }});
 
 client.on('message', msg => {
-if(msg.content.startsWith(prefix+'say')) {
-if(msg.member.id = "556160607339020315") {
-     msg.channel.send(msg.content.substr(4));
-}
-     msg.delete();
-}
-});
-
-client.on('message', msg => {
 if(msg.content.startsWith(prefix+'destroy')) {
      msg.delete();
      console.log("Destroys...");
