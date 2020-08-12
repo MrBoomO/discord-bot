@@ -138,12 +138,6 @@ message.reply("У вас не хватает прав");
 }});
 
 client.on('message', msg => {
-if(msg.content.startsWith(prefix+'msg')) {
-msg.channel.send(`First argument: ${args[0]}`);
-}
-});
-
-client.on('message', msg => {
 if(msg.content.startsWith(prefix+'say')) {
 if(msg.member.id = "556160607339020315") {
      msg.channel.send(msg.content.substr(4));
@@ -162,7 +156,7 @@ if(msg.content.startsWith(prefix+'destroy')) {
 });
 
 client.on("message", message => {
-    const swearWords = ["сука", "блять", "трах", "секс", "когда видео", "хуй", "блэт", "бля", "еблан", "тварь", "порно", "анал", "долбаёб", "пися", "пизда", "оргазм", "писька", "сиськ", "хуесос"];
+    const swearWords = ["сука", "блять", "трах", "секс", "когда видео", "хуй", "блэт", "бля", "еблан", "тварь", "порно", "анал", "долбаёб", "пися", "пизда", "оргазм", "писька", "сиськ", "хуесос", "ебана", "сюка", "лох", "дрочка", "пиздюк", "срака",];
     if( swearWords.some(word => message.content.toLowerCase().includes(word)) ) {
       message.delete()
     }} )
