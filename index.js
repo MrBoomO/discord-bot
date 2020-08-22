@@ -164,4 +164,17 @@ client.on("guildDelete", guild => {
    guild.owner.send('Мне жаль покидать ваш прекрасный сервер😕. Досвидания.')
 })
 
+client.on("message", msg => {
+if(msg.content.startsWith(prefix+'msg')) {
+const coolEmbed = new Discord.MessageEmbed()
+	.setColor('#0099ff')
+	.setURL('https://mrboomoff.gamejolt.io/')
+	.setAuthor('Важное сообщение')
+        .setDescription('Контент')
+	.setFooter('Bot by MrBoom#4863', 'https://github.com/MrBoomO/discord-bot/raw/master/img/lggw43axm1641.png');
+
+msg.channel.send(coolEmbed);
+}
+}
+
 client.login(process.env.TOKEN);
