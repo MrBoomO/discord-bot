@@ -149,7 +149,7 @@ if(msg.content.startsWith(prefix+'destroy')) {
 client.on("message", message => {
     const swearWords = ["сука", "блять", "трах", "секс", "когда видео", "хуй", "блэт", "бля", "еблан", "тварь", "порно", "анал", "долбаёб", "пися", "пизда", "оргазм", "писька", "сиськ", "хуесос", "ебана", "сюка", "лох", "дрочка", "пиздюк", "срака",];
     if( swearWords.some(word => message.content.toLowerCase().includes(word)) ) {
-     if(msg.channel.type === '🔞nsfw') {
+     if(message.channel.type === '🔞nsfw') {
 } else {
       message.delete()
 }
