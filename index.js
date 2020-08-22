@@ -175,6 +175,6 @@ const coolEmbed = new Discord.MessageEmbed()
 
 msg.channel.send(coolEmbed);
 }
-}
+});
 
 client.login(process.env.TOKEN);
