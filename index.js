@@ -165,6 +165,7 @@ client.on("guildDelete", guild => {
 })
 
 client.on("message", msg => {
+const args = msg.content.split(' ');
 if(msg.content.startsWith(prefix+'msg')) {
 const coolEmbed = new Discord.MessageEmbed()
 	.setColor('#0099ff')
