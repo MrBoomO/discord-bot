@@ -166,7 +166,7 @@ client.on("guildDelete", guild => {
 
 client.on("message", msg => {
 const args = msg.content.split(' ');
-if(msg.toLowerCase().content.startsWith(prefix+'msg')) {
+if(msg.content.startsWith(prefix+'msg')) {
 const coolEmbed = new Discord.MessageEmbed()
 	.setColor('#0099ff')
 	.setURL('https://mrboomoff.gamejolt.io/')
