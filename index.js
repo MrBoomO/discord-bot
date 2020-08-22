@@ -169,8 +169,8 @@ if(msg.content.startsWith(prefix+'msg')) {
 const coolEmbed = new Discord.MessageEmbed()
 	.setColor('#0099ff')
 	.setURL('https://mrboomoff.gamejolt.io/')
-	.setAuthor('Важное сообщение')
-        .setDescription('Контент')
+	.setAuthor(args[1])
+        .setDescription(args[2])
 	.setFooter('Bot by MrBoom#4863', 'https://github.com/MrBoomO/discord-bot/raw/master/img/lggw43axm1641.png');
 
 msg.channel.send(coolEmbed);
